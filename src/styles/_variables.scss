@@ -1,0 +1,34 @@
+$background: #fffffe;
+$card-background: #f2f4f6;
+$heading: #00214d;
+$link: #ff526f;
+$link-darkened: #ad001d;
+$link-muted: #d98c99;
+$text: #1b2d45;
+$text-muted: #abb1ba;
+
+$primary-gray-100: #F8F9FA;
+$primary-gray-150:#EEF0F3;
+$primary-gray-400: #CED4DA;
+$primary-gray-500:#ADB5BD;
+$primary-gray-600: #6C757D;
+$primary-gray-700: #495057;
+$primary-gray-800: #343A40;
+$primary-gray-900: #212529;
+$brand: #3DCC77;
+$alert-purple: #E2D9F3;
+$alert-info: #0DCAF0;
+
+
+$bp-sm: 600px;
+$bp-md: 700px;
+$bp-lg: 1024px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);

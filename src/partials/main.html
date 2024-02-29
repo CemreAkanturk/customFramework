@@ -1,0 +1,219 @@
+<main class="wrapper">
+  <header class="header"></header>
+  <div class="container-fluid content-wrapper">
+    <div class="row row-cols-1 row-cols-md-2 justify-content-between ">
+      <div class="logo-container col d-flex align-items-center">
+        <img width="80" class="avatar-img" src="../src/assets/avatars.svg">
+        <div class="d-flex flex-column justify-content-start">
+          <h3 class="poppins-semibold">Compliance Frameworks</h3>
+          <p> <span>Admin ></span> Compliance Frameworks</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-center justify-content-end">
+        <button class="custom-btn primary">? Help</button>
+        <button class="custom-btn success" id="addCustomFramworkBtn" data-bs-toggle="modal" data-bs-target="#addCustomFramework">+ New Custom
+          Framework <span>1/3</span></button>
+      </div>
+    </div>
+    <div class="d-flex contents">
+      <div id="box-container">
+        <div class="card box">
+          <div class="d-flex">
+            <img width="80" class="avatar-img" src="../src/assets/ecf.svg">
+            <div class="card-text d-flex flex-column justify-content-center align-items-start">
+              <span>Custom Framework</span>
+              <p class="title">ECF 2023</p>
+              <p class="description">Example Custom Framework</span>
+            </div>
+          </div>
+          <div class="box-info">
+            <i class="fa fa-info-circle" aria-hidden="true"></i> Ready to Map
+          </div>
+        </div>
+      </div>
+      <div id="table-container">
+        <div class="card empty align-items-center justify-content-center">
+          <img width="96" class="avatar-img" src="../src/assets/vector.svg">
+          <p>Please select framework from list in left side. <br> or <strong>click here</strong> to add new framework
+          </p>
+        </div>
+        <div class="card table">
+          <div style="width: 100%;padding: 15px;" class="table-responsive">
+            <table id="dataTable" class="table table-bordered table-responsive table-striped w-100">
+            </table>
+          </div>
+            
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <footer class="footer">
+  </footer>
+
+  <div class="modal" id="addCustomFramework">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title">Add New Framework</h4>
+            <p class="modal-sub-title">Please fill in the details of he new framework.</p>
+          </div>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body stepper">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="stepper-btn first active">
+              <div class="circle">01</div>
+            </button>
+            <span class="vl flex-fill"></span>
+            <button class="stepper-btn second ">
+              <div class="circle">02</div>
+            </button>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-10">
+            <p class="text-900">Framework Details</p>
+            <p class="text-900">Control Items</p>
+          </div>
+          <form class="form form-first row" id="firstStepForm">
+            <div class="alert alert-info" role="alert">
+              You can 1 Enterprice Framework license available.
+            </div>
+            <div class="form-item col-6 align-items-start">
+              <div class="form-bg">
+                <label for="inputName" class="form-label text-600 fs-14">Name</label>
+                <input type="text" id="inputName" class="form-control fs-16" aria-describedby="nameBlock"
+                  placeholder="Enter name" required>
+              </div>
+            </div>
+            <div class="form-item col-6 align-items-start">
+              <div class="form-bg">
+                <label for="inputShortName" class="form-label text-600 fs-14">Short Name</label>
+                <input type="text" id="inputShortName" class="form-control fs-16" aria-describedby="shortNameBlock"
+                  placeholder="Enter short name" required>
+              </div>
+            </div>
+            <div class="form-item col-12 align-items-start">
+              <div class="form-bg d-flex justify-content-between align-items-center">
+                <label for="logocheckbox" class="form-label text-600 fs-14">Upload Framework Logo</label>
+                <input class="form-check-input" type="checkbox" value="" id="logocheckbox" >
+              </div>
+            </div>
+            <div class="form-item col-12 align-items-start">
+              <div class="form-bg">
+                <label for="inputDescription" class="form-label text-600 fs-14">Description</label>
+                <textarea class="form-control" id="inputDescription" rows="3" placeholder="Please add description" required></textarea>
+              </div>
+            </div>
+            <div class="form-item col-12 align-items-start">
+              <div class="form-bg">
+                <label for="inputTemplate" class="form-label text-600 fs-14">Upload Template</label>
+                <input class="form-control" type="file" id="inputTemplate">
+              </div>
+            </div>
+              <div class="modal-footer">
+                <button type="button" class="custom-btn light" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" id="firstStepNextBtn" class="custom-btn success">Next > Control Items</button>
+              </div>
+          </form>
+          <form class="form form-second row" id="secondStepForm">
+                <div class="container table-responsive">
+                  <table id="dataTableModal" class="table table-bordered table-striped" style="width: 100%;">
+                      <thead>
+                        <tr>
+                          <th style="width: 10%;">Control ID</th>
+                          <th style="width: 30%;" >Control Category</th>
+                          <th style="width: 50%;">Control Description</th>
+                          <th style="width: 10%;">Actions</th>
+                        </tr>
+                        <tbody>
+                          <tr>
+                            <td>Article I-0 -1.1</td>
+                            <td>Article I, Business Contact Information</td>
+                            <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery of
+                            Services and Deliverables.</td>
+                            <td>
+                              <button class="action-btn"><i class="fa fa-pen"></i></button>
+                              <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Article I-0 -1.1</td>
+                            <td>Article I, Business Contact Information</td>
+                            <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery
+                              of
+                              Services and Deliverables.</td>
+                            <td>
+                              <button class="action-btn"><i class="fa fa-pen"></i></button>
+                              <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>
+                            <tr>
+                              <td>Article I-0 -1.1</td>
+                              <td>Article I, Business Contact Information</td>
+                              <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery
+                                of
+                                Services and Deliverables.</td>
+                              <td>
+                                <button class="action-btn"><i class="fa fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Article I-0 -1.1</td>
+                              <td>Article I, Business Contact Information</td>
+                              <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery
+                                of
+                                Services and Deliverables.</td>
+                              <td>
+                              <button class="action-btn"><i class="fa fa-pen"></i></button>
+                              <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Article I-0 -1.1</td>
+                              <td>Article I, Business Contact Information</td>
+                              <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery
+                                of
+                                Services and Deliverables.</td>
+                              <td>
+                                <button class="action-btn"><i class="fa fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Article I-0 -1.1</td>
+                              <td>Article I, Business Contact Information</td>
+                              <td>Company and Supplier may Process the other's BCI wherever they do business in connection with Supplier's delivery
+                                of
+                                Services and Deliverables.</td>
+                              <td>
+                              <button class="action-btn"><i class="fa fa-pen"></i></button>
+                              <button class="action-btn delete"><i class="fa fa-trash"></i></button>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </thead>
+                  </table>
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="custom-btn light" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" id="secondStepPrevBtn" class="custom-btn light">Previous Step</button>
+                <button type="button" class="custom-btn primary" data-bs-dismiss="modal" disabled>+ Add Control Items</button>
+                <button type="submit" id="saveBtn" class="custom-btn success">Save</button>
+              </div>
+            </form>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</main>
