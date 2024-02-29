@@ -1,0 +1,21 @@
+{
+  "name": "test-case",
+  "version": "1.0.0",
+  "description": "Test Case",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass src/styles.scss -o src",
+    "dev": "npm run build && node-sass src/styles.scss -wo src"
+  },
+  "author": "Cemre Akanturk",
+  "license": "",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
